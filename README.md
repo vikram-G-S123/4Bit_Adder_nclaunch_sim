@@ -49,18 +49,10 @@ Note : File name should be with HDL Extension
 
 ### a) Verify the Functionality 
 
-	Three Codes shall be written for implementation of 4-bit Adder as follows, 
 
-•	fa.v → Single Bit 3-Input Full Adder [Sub-Module / Function] 
-
-•	fa_4bit.v → Top Module for Adding 4-bit Inputs. 
-
-•	fa_4bit_test.v → Test bench 
-
-*/Program to design 4 bit adder by instantiating 1 bit Full adder.also add test bench program */
-Developed by: Register Number*/
 
 `timescale 1ns / 1ps
+
 module four_bit_adder (
     input [3:0] A,    
     input [3:0] B,    
