@@ -71,17 +71,15 @@ module four_bit_adder (
     assign {Cout, Sum} = A + B + Cin;  
 endmodule
 
-
+TESTBENCH:
 
 `timescale 1ns / 1ps
-
 module testbench;
     reg [3:0] A, B;
     reg Cin;
     wire [3:0] Sum;
     wire Cout;
-
-
+    
     four_bit_adder uut (
         .A(A), .B(B), .Cin(Cin),
         .Sum(Sum), .Cout(Cout)
