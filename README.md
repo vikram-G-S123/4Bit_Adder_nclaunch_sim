@@ -60,13 +60,16 @@ module four_bit_adder (
     output [3:0] Sum, 
     output Cout       
 );
+
     assign {Cout, Sum} = A + B + Cin;  
 endmodule
 
 TESTBENCH:
 
 `timescale 1ns / 1ps
+
 module testbench;
+
     reg [3:0] A, B;
     reg Cin;
     wire [3:0] Sum;
