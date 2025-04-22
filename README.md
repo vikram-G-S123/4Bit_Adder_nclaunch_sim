@@ -60,6 +60,46 @@ Note : File name should be with HDL Extension
 */Program to design 4 bit adder by instantiating 1 bit Full adder.also add test bench program */
 Developed by: Register Number*/
 
+`timescale 1ns / 1ps
+module four_bit_adder (
+    input [3:0] A,    
+    input [3:0] B,    
+    input Cin,        
+    output [3:0] Sum, 
+    output Cout       
+);
+    assign {Cout, Sum} = A + B + Cin;  
+endmodule
+
+
+
+`timescale 1ns / 1ps
+
+module testbench;
+    reg [3:0] A, B;
+    reg Cin;
+    wire [3:0] Sum;
+    wire Cout;
+
+
+    four_bit_adder uut (
+        .A(A), .B(B), .Cin(Cin),
+        .Sum(Sum), .Cout(Cout)
+    );
+
+    initial begin
+        $monitor("A = %b, B = %b, Cin = %b | Sum = %b, Cout = %b", A, B, Cin, Sum, Cout);
+        
+
+        A = 4'b0001; B = 4'b0010; Cin = 1'b0; #10;
+        A = 4'b0101; B = 4'b0110; Cin = 1'b1; #10;
+        A = 4'b1111; B = 4'b0001; Cin = 1'b0; #10;
+        A = 4'b1010; B = 4'b0101; Cin = 1'b1; #10;
+        
+        $finish;
+    end
+endmodule
+
 ## Functional Simulation: 
 
 	Invoke the cadence environment by type the below commands 
