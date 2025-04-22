@@ -92,15 +92,9 @@ endmodule
 
 ## Functional Simulation: 
 
-	Invoke the cadence environment by type the below commands 
 
-	tcsh (Invokes C-Shell) 
+![Screenshot 2025-04-22 174706](https://github.com/user-attachments/assets/5dc02f15-8490-4cc9-aaa1-44265bb45a92)
 
-	source /cadence/install/cshrc (mention the path of the tools) 
-
-      (The path of cshrc could vary depending on the installation destination)
-      
-	After this you can see the window like below 
 
 ### Fig 3:Invoke the Cadence Environment
 
