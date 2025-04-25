@@ -50,17 +50,20 @@ Note : File name should be with HDL Extension
 ### a) Verify the Functionality 
 
 `timescale 1ns/1ps
+
 module full_adder(a, b, cin, sum, court);
 
   input a, b, cin;
+  
   output sum, court;
-
 
   assign sum = a ^ b ^ cin;
 
   assign cout = (a & b) | (b & cin) | (cin & a);
   
 endmodule
+
+
 
 module four_bit_adder(A, B, Cin, Sum, Cout);
 
@@ -83,6 +86,7 @@ module four_bit_adder(A, B, Cin, Sum, Cout);
   full_adder fa3(A[3], B[3], c3,    Sum[3], Cout);
   
 endmodule
+
 
 
 
