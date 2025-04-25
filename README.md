@@ -50,43 +50,60 @@ Note : File name should be with HDL Extension
 ### a) Verify the Functionality 
 
 `timescale 1ns/1ps
-module full_adder(a,b,cin,sum,cout);
+module full_adder(a, b, cin, sum, court);
 
-input a;
-input b;
-input cin;
-output sum;
-output cout;
-assign sum = a ^ b ^ cin;
-assign cout = (a & b) | (b & cin) | (cin & a);
+  input a, b, cin;
+  output sum, court;
+
+
+  assign sum = a ^ b ^ cin;
+
+  assign cout = (a & b) | (b & cin) | (cin & a);
   
 endmodule
-module four_bit_adder(A,B,Cin,Sum,Cout);
 
-  input [3:0] A,B;
+module four_bit_adder(A, B, Cin, Sum, Cout);
+
+  input [3:0] A, B;
+  
   input Cin;
+  
   output [3:0] Sum;
+
   output Cout;
+  
   wire c1, c2, c3;
-  full_adder fa0(A[0], B[0], Cin, Sum[0], c1);
-  full_adder fa1(A[1], B[1], c1, Sum[1], c2);
-  full_adder fa2(A[2], B[2], c2, Sum[2], c3);
-  full_adder fa3(A[3], B[3], c3, Sum[3], Cout);  
+  
+  full_adder fa0(A[0], B[0], Cin,   Sum[0], c1);
+  
+  full_adder fa1(A[1], B[1], c1,    Sum[1], c2);
+  
+  full_adder fa2(A[2], B[2], c2,    Sum[2], c3);
+  
+  full_adder fa3(A[3], B[3], c3,    Sum[3], Cout);
   
 endmodule
+
 
 
 TESTBENCH:
 
 `timescale 1ns / 1ps
+
 module tb_adder4;
 
   reg [3:0] a, b;
+
   reg cin;
+  
   wire [3:0] sum;
+  
   wire cout;
+  
   adder4 m(a, b, cin, sum, cout);
+  
   initial begin
+  
     a=4'b0001; b=4'b0010; cin=0; #10;
     a=4'b0101; b=4'b0011; cin=0; #10;
     a=4'b1111; b=4'b1111; cin=0; #10;
