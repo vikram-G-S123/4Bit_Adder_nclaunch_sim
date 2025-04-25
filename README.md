@@ -49,17 +49,24 @@ Note : File name should be with HDL Extension
 
 ### a) Verify the Functionality 
 
-module full_adder(input a, input b, input cin, output sum, output court);
+`timescale 1ns/1ps
+module full_adder(a,b,cin,sum,cout);
 
-  assign sum = a ^ b ^ cin;
-  assign cout = (a & b) | (b & cin) | (cin & a);
+input a;
+input b;
+input cin;
+output sum;
+output cout;
+assign sum = a ^ b ^ cin;
+assign cout = (a & b) | (b & cin) | (cin & a);
   
 endmodule
 module four_bit_adder(A,B,Cin,Sum,Cout);
-input [3:0] A,B;
-input Cin;
-output [3:0] Sum;
-output Cout;
+
+  input [3:0] A,B;
+  input Cin;
+  output [3:0] Sum;
+  output Cout;
   wire c1, c2, c3;
   full_adder fa0(A[0], B[0], Cin, Sum[0], c1);
   full_adder fa1(A[1], B[1], c1, Sum[1], c2);
