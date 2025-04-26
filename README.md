@@ -135,7 +135,7 @@ endmodule
 
 ### Fig 5:cds.lib file Creation
 
-![Screenshot 2025-04-22 174951](https://github.com/user-attachments/assets/d1fa439e-643b-4dfe-beab-9ae5ea82477e)
+![Screenshot 2025-04-22 181128](https://github.com/user-attachments/assets/09223536-5ff3-4902-9afd-3790b19e7178)
 
 
 ### Fig 6: Selection of Don’t include any libraries
@@ -171,6 +171,9 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
 ### Fig 8: Compiled database in worklib
+
+
+![Screenshot 2025-04-22 175126](https://github.com/user-attachments/assets/cd93e71f-a2fb-4264-8c5a-442039f35195)
 
 
 
