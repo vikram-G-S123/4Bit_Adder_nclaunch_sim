@@ -130,12 +130,12 @@ endmodule
 
 ### Fig 4:Setting Multi-step simulation
 
- ![Screenshot 2025-04-22 174941](https://github.com/user-attachments/assets/eaa44870-3de0-42b8-afd0-609e6276c172)
+![Screenshot 2025-04-22 181128](https://github.com/user-attachments/assets/09223536-5ff3-4902-9afd-3790b19e7178)
 
 
 ### Fig 5:cds.lib file Creation
 
-![Screenshot 2025-04-22 181128](https://github.com/user-attachments/assets/09223536-5ff3-4902-9afd-3790b19e7178)
+ ![Screenshot 2025-04-22 174941](https://github.com/user-attachments/assets/eaa44870-3de0-42b8-afd0-609e6276c172)
 
 
 ### Fig 6: Selection of Don’t include any libraries
