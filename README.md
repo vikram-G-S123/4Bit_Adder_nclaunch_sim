@@ -150,6 +150,7 @@ endmodule
 
 ### Fig 7: Nclaunch Window
 
+![Screenshot 2025-04-22 174951](https://github.com/user-attachments/assets/72467e1d-7c79-459c-b7f6-cdcb1766b0a8)
 
 
 ## Step 1: Compilation:– Process to check the correct Verilog language syntax and usage 
@@ -170,6 +171,8 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
 
 ### Fig 8: Compiled database in worklib
+
+
 
 	After compilation it will come under worklib you can see in right side window
 
